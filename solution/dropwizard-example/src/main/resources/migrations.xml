@@ -17,4 +17,16 @@
             <column name="jobTitle" type="varchar(255)"/>
         </createTable>
     </changeSet>
+
+    <changeSet id="2" author="luigi">
+        <createTable tableName="expense">
+            <column name="id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="created" type="datetime"/>
+            <column name="value" type="decimal"/>
+            <column name="reason" type="varchar(255)"/>
+        </createTable>
+    </changeSet>
+    
 </databaseChangeLog>
