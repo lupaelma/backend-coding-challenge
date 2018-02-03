@@ -25,7 +25,9 @@ window.moment = require("../../libs/moment/moment.min.js");
 window.Big = require("../../libs/bigjs/big.min.js");
 
 // Commonly used third party Angular modules
-require("../../libs-angular/angular/angular.min.js");
+
+// changed to angular.js for debugging purposes
+require("../../libs-angular/angular/angular.js");
 require("../../libs-angular/angular/angular-touch.min.js");
 require("../../libs-angular/angular/angular-route.min.js");
 require("../../libs-angular/angular/angular-animate.min.js");

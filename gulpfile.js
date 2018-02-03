@@ -156,10 +156,17 @@ gulp.task("html", function() {
 
 // Compile an individual directory's partials
 function compilePartials(filepath) {
+/*
+  On my Windows 10 64 bit filepath contains /
+  with platform win32 so partials build is broken.
+  Fixing below to split on /
+
 	if (process.platform === "win32")
 		var pathArray = filepath.split("\\");
 	else
 		var pathArray = filepath.split("/");
+*/
+  pathArray = filepath.split("/");
 
 	pathArray.pop();
 	var basename = pathArray.pop();

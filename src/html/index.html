@@ -17,11 +17,13 @@
 	</head>
 	<body>
 		<div id="header">
-			<ng-include src=" 'shared/navbar.html' "></ng-include>
-			<ng-include src=" 'shared/navbar-subbar.html' "></ng-include>
+      <!-- have not found another way to include partials from template cache -->
+      <!-- using brute force approach for now -->
+			<ng-include src=" 'shared/c:/gigi/projects/engage/backend-coding-challenge/build/source/js/apps/shared/partials/navbar.html' "></ng-include>
+			<ng-include src=" 'shared/c:/gigi/projects/engage/backend-coding-challenge/build/source/js/apps/shared/partials/navbar-subbar.html' "></ng-include>
 		</div>
 		<div id="tab-header">
-			<ng-include src=" 'shared/tab-header.html' "></ng-include>
+			<ng-include src=" 'shared/c:/gigi/projects/engage/backend-coding-challenge/build/source/js/apps/shared/partials/tab-header.html' "></ng-include>
 		</div>
 		<div id="content">
 			<ng-view class="slide-view"></ng-view>

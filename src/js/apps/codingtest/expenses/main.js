@@ -14,7 +14,10 @@ var app = angular.module("expenses.controllers", [
 
 app.config(["$routeProvider", function($routeProvider) {
 	// Labour analysis routes
-	$routeProvider.when("/expenses", { templateUrl: "codingtest/expenses-content.html" });
+
+  // have not found another way to include partials from template cache
+  // using brute force approach for now
+	$routeProvider.when("/expenses", { templateUrl: "codingtest/c:/gigi/projects/engage/backend-coding-challenge/build/source/js/apps/codingtest/partials/expenses-content.html" });
 
 	$routeProvider.otherwise({redirectTo: "/expenses"});
 }]);
