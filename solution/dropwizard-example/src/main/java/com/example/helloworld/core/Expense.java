@@ -35,6 +35,9 @@ public class Expense {
     @Column(name = "reason")
     private String reason;
 
+    public Expense() {
+    }
+
     public Expense(
         final LocalDateTime created,
         final Double value,
