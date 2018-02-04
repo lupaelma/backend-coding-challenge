@@ -25,6 +25,7 @@ database:
 #    port: 8080
 
 server:
+  rootPath: /app/
   requestLog:
     appenders:
       - type: console
@@ -38,7 +39,7 @@ server:
 #  hardNofileLimit: 1000
   applicationConnectors:
     - type: http
-      port: 8888
+      port: 8080
     - type: https
       port: 8443
       keyStorePath: example.keystore

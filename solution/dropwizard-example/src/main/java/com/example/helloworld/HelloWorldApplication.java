@@ -65,7 +65,7 @@ public class HelloWorldApplication extends Application<HelloWorldConfiguration> 
         );
 
         bootstrap.addCommand(new RenderCommand());
-        bootstrap.addBundle(new AssetsBundle());
+        bootstrap.addBundle(new AssetsBundle("/assets/", "/", "index.html"));
         bootstrap.addBundle(new MigrationsBundle<HelloWorldConfiguration>() {
             @Override
             public DataSourceFactory getDataSourceFactory(HelloWorldConfiguration configuration) {
@@ -104,5 +104,7 @@ public class HelloWorldApplication extends Application<HelloWorldConfiguration> 
         environment.jersey().register(new PersonResource(dao));
         environment.jersey().register(new FilteredResource());
         environment.jersey().register(new ExpenseResource(expenseDAO));
+        
+        environment.jersey().setUrlPattern("/app/*");
     }
 }
