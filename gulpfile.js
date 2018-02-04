@@ -166,7 +166,7 @@ function compilePartials(filepath) {
 	else
 		var pathArray = filepath.split("/");
 */
-  pathArray = filepath.split("/");
+  var pathArray = filepath.split("/");
 
 	pathArray.pop();
 	var basename = pathArray.pop();
@@ -182,8 +182,13 @@ function compilePartials(filepath) {
 			path: function(path, base) {
 				if (!base.endsWith("partials/"))
 					base += "partials/";
-
-				return basename + "/" + path.replace(base, "");
+				/* 
+           Not sure how can this work... using relative path to
+           fix references to partials from index.html and main.js
+           
+           return basename + "/" + path.replace(base, "");
+        */
+				return basename + "/" + path.split("\\").pop();
 			}
 		}))
 		.pipe(uglify(settings.uglify))
