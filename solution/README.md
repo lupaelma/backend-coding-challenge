@@ -20,6 +20,11 @@ Running the application
 
 Reviewing the code
 --------------
-1. goto to the repository https://github.com/lupaelma/backend-coding-challenge
-0. select the branch luigi-coding-test
-0. review the branch commits to see the development activities
+The changes related to the backend challenge can be reviewed at the PR below.
+
+1. https://github.com/engagetech/backend-coding-challenge/pull/16
+
+Please note I had to modify the gulp build to work on my Windows laptop. 
+Some of these changes can perhaps be included in the build script moving forward.
+I have not used MySql but continued using the embedded dropwizard H2 database. 
+I have not enabled security or authentication.
